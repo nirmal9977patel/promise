@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIRTUAL MCDONALD'S</title>
+</head>
+<style>
+    #show_food > div > img{
+        width:100%;
+        height: 100%;
+        /* object-fit: cover; */
+        border-radius: 10%;
+    }
+    h2{
+        color: red;
+    }
+   h1{
+       text-align: center;
+       background-color:green;
+       height:70px;
+       margin-top: -7px;
+   }
+#submit{
+    width: 100px;
+    height: 30px;
+    background-color:orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+#submit:hover{
+    background-color: green;
+}
+.food_system{
+   display: flex;
+}
+#show_food{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    margin-top: -20px;
+}
+#show_food > div{
+    width:500px;
+    height: 500px;
+    padding: 10px;
+    
+    /* margin: 30px; */
+}
+#show_time{
+    text-align: justify;
+}
+#form>label{
+    color:blue;
+}
+
+</style>
+
+<body>
+    <h1>VIRTUAL MCDONALD'S </h1>
+    <hr>
+    <h2> Food Menu</h2> 
+ <div class="food_system">
+     <div>
+<form id="form" >
+    <input type="checkbox" id="Food1"  value="Fried_Rice">
+    <label for="Food1"> Fried Rice</label>
+    <br>
+    <input type="checkbox" id="Food2"  value="Burger">
+    <label for="Food2"> Burger</label>
+    <br>
+    <input type="checkbox" id="Food3"  value="Momos">
+    <label for="Food3"> Momos</label>
+    <br>
+    <input type="checkbox" id="Food4"  value="Pizza">
+    <label for="Food4"> Pizza</label>
+    <br>
+    <input type="checkbox" id="Food5"  value="Ice">
+    <label for="Food5"> Ice-Cream</label>
+    <br>
+    <input type="checkbox" id="Food6"  value="Roti">
+    <label for="Food6"> Roti</label><br>
+    <input type="checkbox" id="Food7"  value="Coca_Cola">
+    <label for="Food7"> Coca-Cola</label><br><br>
+    <button id="submit">Order Food</button>
+  </form>
+</div>
+        <div id="show_food">
+        </div>
+        <div id="show_time"></div>
+</div>  
+</body>
+</html>
+<script src="./index.js"></script>

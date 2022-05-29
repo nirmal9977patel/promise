@@ -1,0 +1,62 @@
+#winner{
+    width: 50%;
+    height: 80px;
+    margin: auto;
+    background-color: yellowgreen;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+    font-size: 50px;
+    padding-top: 20px;
+    display: flex;
+}
+#container {
+    height: 300px;
+    width: 70%;
+    margin: auto;
+    background-color: aqua;
+    display: flex;
+
+
+    text-align: center;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+#container>div {
+    height: 100px;
+    width: 150px;
+    border: 1px solid black;
+    margin-top: 10%;
+    /* justify-items: center; */
+    text-align: center;
+    
+    
+   
+}
+#member1,#member2,#member3{
+   
+    margin: auto;
+    height:70px;
+     width:70px;
+    /* padding:50px; */
+    margin:0px auto;
+    border:1px solid;
+    font-size: 85px;
+         justify-content: center;
+         text-align: center;
+}
+#roll {
+    width: 130px;
+    height: 70px;
+    margin: auto;
+    background-color: orangered;
+    border: 0px;
+    margin-top: 20px;
+    border-radius: 10px;
+    font-size: larger;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    display: flex;
+
+}

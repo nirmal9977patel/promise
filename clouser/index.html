@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #movies{
+            width: 200px;
+            height: 250px;
+            border:1px solid black;
+            border-top: none;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <input oninput="main()" type="text" id="query">
+    <div id="movies"></div>
+</body>
+</html>
+<script>
+    let id;
+    let movies_div= document.getElementById("movies");
+
+    async function searchMovies(q){
+      try{
+        let url=`http://www.omdbapi.com/?s=${q}&apikey=d806bd70`;
+        let res= await fetch(url);
+        let data= await res.json();
+        return data.search;
+
+      } catch (error){
+          console.log('error',error)
+      }
+    }
+
+    function appendMovies(movies){
+        movies_div.innerHTML=null;
+
+        if(movies===undefined){
+            return false;
+        }
+        movies.forEach(function (el){
+            let p= document.createElement('p');
+            p.innerText=el.Title;
+            movies_div.append(p)
+        })
+    }
+
+     async function main(){
+        let query= document.getElementById("query").value;
+       
+       
+        let response =searchMovies(query);// who is return a promise
+        let data =await response; //searchmovies is return a promise ,async function , no matter what, returns a promise
+        appendMovies(data);
+    }
+// main('a')
+    function debounceFunction(func,delay){
+       id= setTimeout(function(){
+           func();
+       },delay);
+    }
+</script>
